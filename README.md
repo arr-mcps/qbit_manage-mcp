@@ -1,6 +1,6 @@
 # qbit_manage-mcp
 
-Part of the [arr-mcps](https://github.com/SavageCore/arr-mcps) collection.
+Part of the [arr-mcps](https://github.com/arr-mcps/arr-mcps) collection.
 MCP server exposing [qbit_manage](https://github.com/StuffAnThings/qbit_manage)'s
 Web API as tools, so an LLM can read and manage a qbit_manage instance:
 run maintenance commands against your qBittorrent torrents, manage config
@@ -21,7 +21,7 @@ for details.
 
 ## Install
 
-Download a wheel from the [latest release](https://github.com/SavageCore/qbit_manage-mcp/releases/latest)
+Download a wheel from the [latest release](https://github.com/arr-mcps/qbit_manage-mcp/releases/latest)
 and install it as a `uv` tool (no repo checkout needed):
 
 ```bash
@@ -111,6 +111,6 @@ make help  # list all commands
 | `make clean` | Remove build artifacts |
 
 The release workflow (`.github/workflows/release.yml`) builds and publishes to
-[Releases](https://github.com/SavageCore/qbit_manage-mcp/releases) whenever a
+[Releases](https://github.com/arr-mcps/qbit_manage-mcp/releases) whenever a
 `v*` tag is pushed - so the usual flow is `make bump-patch`, commit, then tag
 and push.
