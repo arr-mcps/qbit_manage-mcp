@@ -1,0 +1,22 @@
+[project]
+name = "qbit-manage-mcp"
+version = "0.0.0"
+description = "MCP server for qbit_manage's Web API (read + write)"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["fastmcp>=2.0.0"]
+
+[project.scripts]
+qbit-manage-mcp = "qbit_manage_mcp:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0.0", "pytest-asyncio>=0.24.0"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = ["integration: hits a real qbit_manage instance (needs QBIT_MANAGE_URL/QBIT_MANAGE_API_KEY)"]
+addopts = "-m 'not integration'"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
